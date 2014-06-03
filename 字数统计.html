@@ -1,0 +1,13 @@
+<!—
+字数统计
+—>
+<textarea id="content" onkeydown="CountChar('content','tips');" onkeyup="CountChar('content','tips');"></textarea>
+<span id="tips"></span>
+<script>
+function CountChar(textareaName,spanName){
+var Residual=document.getElementById(textareaName).value.length
+var Exceed=document.getElementById(textareaName).value.length-1000
+if(document.getElementById(textareaName).value.length<1001){document.getElementById(spanName).innerHTML="你输入了"+Residual+"字"}
+else{document.getElementById(spanName).innerHTML="超出"+Exceed+"字"}
+}
+</script>
